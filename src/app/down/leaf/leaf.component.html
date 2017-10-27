@@ -1,0 +1,14 @@
+<div class="card text-center">
+  <div class="card-header text-success">
+      <h2>Tree Leaf</h2>
+  </div>
+  <div class="card-body">
+    <p>Last node on the component tree.</p>
+    <!-- Model bound to input control -->
+    <input [(ngModel)]="leafModel">
+    <p>Leaf Value: <span class="text-success">{{leafModel}}</span></p>
+  </div>
+  <div class="card-footer">
+    <p><small>Updated from parent <mark>{{parentUpdateCount}}</mark> times.</small></p>
+  </div>
+</div>
