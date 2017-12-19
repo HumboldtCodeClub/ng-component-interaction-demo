@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col">
+    <div class="card text-center">
+      <div class="card-header text-danger">
+          <h2>Binding & Events Parent Component</h2>
+      </div>
+      <div class="card-body">
+        <p>Use reactive forms, input binding and event emitters to keep all models in sync.</p>
+        <!-- Input using a form control -->
+        <input [formControl]="parentControl">
+        <p>Parent Value: <span class="text-danger">{{parentModel}}</span></p>
+      </div>
+      <div class="card-footer">
+        <p><small>Updated from child <mark>{{updatesOnEvents}}</mark> times.</small></p>          
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <!-- Child component with model passed down and event listener registered -->
+    <hcc-child [(childModel)]="parentModel" (childModelUpdated)="childEventDetected($event)"></hcc-child>
+  </div>
+  <div class="col">
+    <!-- Child component with model passed down and event listener registered -->
+    <hcc-child [(childModel)]="parentModel" (childModelUpdated)="childEventDetected($event)"></hcc-child>
+  </div>
+</div>

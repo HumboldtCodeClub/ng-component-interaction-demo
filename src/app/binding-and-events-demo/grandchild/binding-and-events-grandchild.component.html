@@ -1,0 +1,14 @@
+<div class="card text-center">
+  <div class="card-header text-success">
+      <h2>Binding & Events Grandchild Component</h2>
+  </div>
+  <div class="card-body">
+    <p>Changes here bubble up the component tree.</p>
+    <!-- Input as a form control -->
+    <input [formControl]="grandchildControl">
+    <p>Grandchild value <span class="text-success">{{grandchildModel}}</span></p>
+  </div>
+  <div class="card-footer">
+    <p><small>Updated from parent <mark>{{updatesOnChanges}}</mark> times.</small></p>
+  </div>
+</div>

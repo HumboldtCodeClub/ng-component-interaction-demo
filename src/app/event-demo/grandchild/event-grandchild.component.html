@@ -1,0 +1,12 @@
+<div class="card text-center">
+  <div class="card-header text-success">
+      <h2>Event Grandchild Component</h2>
+  </div>
+  <div class="card-body">
+    <p>Changes here are passed up the component tree.</p>
+    <!-- Input using a form control, no binding used -->
+    <input [formControl]="grandchildControl">
+    <p>Grandchild Value: <span class="text-success">{{grandchildModel}}</span></p>    
+  </div>
+</div>
+  

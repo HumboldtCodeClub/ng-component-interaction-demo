@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col">
+      <div class="card text-center">
+        <div class="card-header text-danger">
+            <h2>Event Parent Component</h2>
+        </div>
+        <div class="card-body">
+          <p>
+            This is a demonstration of how data can be passed up the component tree with 
+            <a href="https://angular.io/guide/component-interaction#parent-listens-for-child-event">events</a>.
+          </p>
+          <!-- Input as a form control, no binding -->
+          <input [formControl]="parentControl">
+          <p>Parent Value: <span class="text-danger">{{parentModel}}</span></p>
+        </div>
+        <div class="card-footer">
+            <p><small>Updated from child <mark>{{updatesOnEvents}}</mark> times.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      <!-- Child component with event listener registered -->
+      <hcc-child (childModelUpdated)="childEventDetected($event)"></hcc-child>
+    </div>
+    <div class="col">
+      <!-- Child component with event listener registered -->
+      <hcc-child (childModelUpdated)="childEventDetected($event)"></hcc-child>      
+    </div>
+  </div>

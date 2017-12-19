@@ -1,0 +1,14 @@
+<div class="card card-green text-center">
+  <div class="card-header">
+      <h2>Input Binding Grandchild Component</h2>
+  </div>
+  <div class="card-body">
+    <p>Last node on the component tree.</p>
+    <!-- Model bound to input control -->
+    <input [(ngModel)]="grandchildModel">
+    <p>Grandchild Value: <span>{{grandchildModel}}</span></p>
+  </div>
+  <div class="card-footer">
+    <p><small>Updated from parent <mark>{{parentUpdateCount}}</mark> times.</small></p>
+  </div>
+</div>

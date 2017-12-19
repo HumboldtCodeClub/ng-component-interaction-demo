@@ -1,18 +1,19 @@
 import { BrowserModule }   from '@angular/platform-browser';
 import { NgModule }        from '@angular/core';
 import { Router }          from '@angular/router';
-import { AppComponent }    from './app.component';
-import { DownModule }      from './down/down.module';
-import { UpModule }        from './up/up.module';
-import { UpAndDownModule } from './up-and-down/up-and-down.module';
-import { routing }         from './routing.module';
+
+import { AppComponent }               from './app.component';
+import { InputBindingDemoModule }     from './input-binding-demo/input-binding-demo.module';
+import { EventDemoModule }            from './event-demo/event-demo.module';
+import { BindingAndEventsDemoModule } from './binding-and-events-demo/binding-and-events-demo.module';
+import { routing }                    from './routing.module';
 
 @NgModule({
   imports: [
     BrowserModule,
-    DownModule,
-    UpModule,
-    UpAndDownModule,
+    InputBindingDemoModule,
+    EventDemoModule,
+    BindingAndEventsDemoModule,
     routing
   ],
   declarations: [

@@ -1,14 +1,22 @@
-<ul class="nav nav-pills justify-content-center">
-  <li class="nav-item">
-      <a class="nav-link" routerLink="/up" routerLinkActive="active">Up</a>
-  </li>
-  <li class="nav-item">
-      <a class="nav-link" routerLink="/down" routerLinkActive="active">Down</a>
-    </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink="/both" routerLinkActive="active">Up & Down</a>
-  </li>
-</ul>
+<div class="container">
+  <div class="row hcc-nav">
+    <div class="col"><hr></div>
+    <div class="col">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/input-binding" routerLinkActive="active">Input Binding</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/binding-and-events" routerLinkActive="active">Binding & Events</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col"><hr></div>
+  </div>
+</div>
 
 <div class="container">
   <router-outlet></router-outlet>

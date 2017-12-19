@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ng-input-demo App', () => {
+describe('ng-component-interaction-demo App', () => {
   let page: AppPage;
 
   beforeEach(() => {

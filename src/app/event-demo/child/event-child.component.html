@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col">
+    <div class="card text-center">
+      <div class="card-header text-primary">
+          <h2>Event Child Component</h2>
+      </div>
+      <div class="card-body">
+        <p>Changes here are passed up the component tree.</p>
+        <!-- Input as a form control, no data binding  -->
+        <input [formControl]="childControl">
+        <p>Child Value: <span class="text-primary">{{childModel}}</span></p>
+      </div>
+      <div class="card-footer">
+          <p><small>Updated from grandchild <mark>{{updatesOnEvents}}</mark> times.</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col">
+    <!-- Child component with event listener registered -->
+    <hcc-grandchild (grandchildModelUpdated)="grandchildModelUpdated($event)"></hcc-grandchild>        
+  </div>
+  <div class="col">
+    <!-- Child component with event listener registered -->
+    <hcc-grandchild (grandchildModelUpdated)="grandchildModelUpdated($event)"></hcc-grandchild>              
+  </div>
+</div>

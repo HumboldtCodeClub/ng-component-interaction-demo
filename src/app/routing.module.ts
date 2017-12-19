@@ -1,14 +1,19 @@
 import { RouterModule, Routes } from '@angular/router';
-import { DownComponent }        from './down/down.component';
-import { UpComponent }          from './up/up.component';
-import { UpAndDownComponent }   from './up-and-down/up-and-down.component';
+
+import { InputBindingDemoComponent } from './input-binding-demo/input-binding-demo.component';
+import { EventDemoComponent }          from './event-demo/event-demo.component';
+import { BindingAndEventsDemoComponent }   from './binding-and-events-demo/binding-and-events-demo.component';
+
+/**
+ * Routing module
+ * Routes to different component interaction demos.
+ */
 
 const routes: Routes = [
-  { path: '',     component: DownComponent },
-  { path: 'down', component: DownComponent },
-  { path: 'up',   component: UpComponent },
-  { path: 'both', component: UpAndDownComponent },
-  { path: '**',   redirectTo: '' }
+  { path: 'input-binding', component: InputBindingDemoComponent },
+  { path: 'events',   component: EventDemoComponent },
+  { path: 'binding-and-events', component: BindingAndEventsDemoComponent },
+  { path: '**',   redirectTo: 'input-binding' }
 ];
 
 export const routing = RouterModule.forRoot(routes);

@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: lightgrey;
+}
+
+.hcc-nav {
+  margin: 25px 0 10px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: darkgrey;
+}
+
+.hcc-nav a {
+  color: darkgrey;
+}
+
+.hcc-nav a:hover {
+  color: black;
+}
+
+.card {
+  margin: 15px 0 15px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  border-width: 4px;
+}
+
+.card-red {
+  border-color: red;
+}
+.card-red h2, .card-red span {
+  color: red;
+}
+
+.card-blue {
+  border-color: blue;
+}
+.card-blue h2, .card-blue span {
+  color: blue;
+}
+
+.card-green {
+  border-color: green;
+}
+.card-green h2, .card-green span {
+  color: green;
+}

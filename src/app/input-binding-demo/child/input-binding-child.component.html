@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col">
+    <div class="card card-blue text-center">
+      <div class="card-header">
+          <h2>Input Binding Child Component</h2>
+      </div>
+      <div class="card-body">
+        <p>Changes here will be passed down the component tree.</p>
+        <!-- Model bound to input control -->
+        <input [(ngModel)]="childModel">
+        <p>Child Value: <span>{{childModel}}</span></p>
+      </div>
+      <div class="card-footer">
+          <p><small>Updated from parent <mark>{{parentUpdateCount}}</mark> times.</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="row">
+  <div class="col">
+    <!-- Model passed to grandchild component -->
+    <hcc-grandchild [(grandchildModel)]="childModel"></hcc-grandchild>        
+  </div>
+  <div class="col">
+    <!-- Model passed to grandchild component -->
+    <hcc-grandchild [(grandchildModel)]="childModel"></hcc-grandchild>              
+  </div>
+</div>

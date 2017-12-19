@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col">
+    <div class="card card-red text-center">
+      <div class="card-header">
+          <h2>Input Binding Parent Component</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          This is a demonstration of how data can be passed down the component tree with 
+          <a href="https://angular.io/guide/component-interaction#pass-data-from-parent-to-child-with-input-binding">input binding</a>.
+        </p>
+        <!-- model bound to input control here -->
+        <input [(ngModel)]="parentModel">
+        <p>Parent Value: <span>{{parentModel}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <!-- Model passed down to child component -->
+    <hcc-child [(childModel)]="parentModel"></hcc-child>
+  </div>
+  <div class="col">
+    <!-- Model passed down to child component -->
+    <hcc-child [(childModel)]="parentModel"></hcc-child>      
+  </div>
+</div>
